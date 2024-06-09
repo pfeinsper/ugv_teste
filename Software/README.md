@@ -84,6 +84,19 @@ Este projeto visa desenvolver um Veículo Terrestre Não Tripulado (UGV) para mo
      ros2 run realsense2_camera realsense2_camera_node
      ros2 run image_transport republish raw in:=/camera/color/image_raw out:=/image_raw
      ```
+   - Outra forma de inicializar a captação de imagens consiste em rodar o codigo abaixo:
+     ```sh
+     systemctl restart start_turtle.service
+     ```
+   - Para visualizar as imagens usar Rviz2 ou rqt_image_view:
+   - rqt_image_view:
+     ```sh
+     ros2 run rqt_image_view rqt_image_view
+     ```
+   - Rviz2:
+     ```sh
+     Rviz2
+     ```
 
 ## Resultados
 
