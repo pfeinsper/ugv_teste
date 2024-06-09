@@ -35,8 +35,18 @@ Analisando um pouco mais a placa de controle, observa-se a presença de alguns L
 
 Por fim, o último fluxo de dados a ser analisado é o indicador do estado de emergência, no qual um sinal digital de nível lógico alto é enviado pelo botão de emergência ao microprocessador, que comunica a situação ao usuário por meio do display da IHM. 
 
-## Circuito de Emergência
+## Circuito de Emergência Físico
+
+O esquemático do circuito de emergência físico utilizado para desernegizar o robô está ilustrado a seguir.
 
 ![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/a42c251f-cbff-423a-822a-de9d12807db7)
 
+Para indicação do estado de emergência ao usuário, foi adotado um sinaleiro vermelho, que acende assim que o botão for pressionado. O componente apresenta uma resistência interna de 1800 Ω, suportando tensões de até 24V e seu acionamento é realizado por uma chave normalmente aberta, responsável por fechar o circuito após pressionamento do botão. 
+
+Foi implementado também um botão de emergência remoto, cujo funcionamento está explicado na pasta de programação. 
+
 ## Detalhamento Circuito Display
+
+O esquemático de conexão de pinos do display para garantir a comunicação I2C está representado a seguir. Os pinos para conexão de 5V e GND estão disponíveis na raspberry pi e uma extensão dos pinos SCL e SDA podem ser encontrados na placa de controle.
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/89fe5d82-cf03-44a6-9ce3-b9f463eb3dc9)
