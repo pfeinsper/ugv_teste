@@ -61,6 +61,31 @@ Este projeto visa desenvolver um Veículo Terrestre Não Tripulado (UGV) para mo
      cd ~/ros2_ws
      colcon build
      ```
+### Configuração display LCD 16x02 com Módulo de Conversão I²C
+
+É necessário alimentá-lo com 5V em um dos pinos de alimentação disponíveis e assinalados pelo silkscreen da brain board, bem como conectar os pinos SDA e SCL.
+
+![Ligações do display](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/505222e8-aac1-4e31-95c6-8f10a74234f2)  
+
+Após conectá-lo à placa, acessou-se o servidor via SSH e instalou-se a biblioteca `RPi_GPIO_i2c_LCD` pelo terminal:
+
+```bash
+sudo pip3 install RPi-GPIO-I2C-LCD
+```
+
+Com a biblioteca instalada, foi necessário buscar o endereço, (0x27), i2c do display usando o comando:
+```bash
+ubuntu@embrapa:~$ i2cdetect -y 1
+```
+A estratégia adotada para redução de consumo foi atualizar o display em um determinado tempo, para isso foi necessário adicionar via editor ‘nano’ um comando para executar o script a cada 5 minutos:
+```bash
+ubuntu@embrapa:~$ crontab -e
+```
+
+Na última linha adicionou-se o código:
+```bash
+*/5 * * * * /usr/bin/python3 /home/ubuntu/osr_ws/src/ihm_lcd.py
+```
 
 ### Aquisição de Imagens
 
