@@ -1,4 +1,4 @@
-# README - Software do UGV para Monitoramento de Talhões em Fruticultura e Silvicultura
+# Software do UGV para Monitoramento de Talhões em Fruticultura e Silvicultura
 
 ## Visão Geral
 
