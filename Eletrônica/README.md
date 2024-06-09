@@ -47,6 +47,6 @@ Foi implementado também um botão de emergência remoto, cujo funcionamento est
 
 ## Detalhamento Circuito Display
 
-O esquemático de conexão de pinos do display para garantir a comunicação I2C está representado a seguir. Os pinos para conexão de 5V e GND estão disponíveis na raspberry pi e uma extensão dos pinos SCL e SDA podem ser encontrados na placa de controle.
+O esquemático de conexão de pinos do display para garantir a comunicação I2C está representado a seguir. Os pinos para conexão de 5V e GND estão disponíveis na raspberry pi e uma extensão dos pinos SCL e SDA pode ser encontrada na placa de controle.
 
 ![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/89fe5d82-cf03-44a6-9ce3-b9f463eb3dc9)
