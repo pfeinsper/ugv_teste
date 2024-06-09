@@ -8,7 +8,7 @@ A eletrônica do protótipo é composta por duas placas: a placa de acionamento 
 
 ### Diagramas de Alimentação 
 
-![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/c5bc6dfb-6f5d-4799-a671-9b6f92f61649)
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/9f748100-b6f7-4ea9-af1d-d4a25ad7c739)
 
 Analisando primeiro a alimentação do sistema, uma bateria fornecendo 14,8V DC é conectada diretamente à placa de acionamento, passando por um circuito de proteção, que possui um fusível, um resistor de 1 kΩ e um diodo, que atuam como proteção do circuito dos motores. Além disso, um módulo de monitoramento de tensão e corrente (INA260) é utilizado para medição de sobrecorrente, além de um multímetro, que é utilizado para monitoramento do usuário dos dados de corrente e tensão.
 
@@ -16,7 +16,7 @@ A tensão 14,8V é usada na alimentação de dois reguladores, um step-down de 1
 
 ### Diagramas de Sinais
 
-![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/891ba8ec-8fbb-4dc3-8923-d29686c0f81f)
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/25b216b0-da69-4218-9a60-26376cbdb3fe)
 
 Para o diagrama de sinais do sistema, note que um novo bloco foi adicionado, o conjunto entre o operador e o rádio controle, responsável por enviar os comandos por meio de ondas de rádio até a Raspberry Pi, que recebe o sinal por meio de um módulo USB. Os dados recebidos pelo microprocessador são enviados na serial e usados para o controle dos motores e servos. 
 
