@@ -1,7 +1,5 @@
 # Umnaned Ground Vehicle 
 
-## Imagens Lado a Lado
-
 | Rover com suportes e câmera | Giro em torno do próprio eixo |
 |----------|----------|
 | <img src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/dc25603e-3112-40d3-9245-cfaf05d391e9" width="400px" />   | <img src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/c3708ece-0bcc-455d-8b7f-dbeec8ed0bf9" width="400px" />  |
@@ -22,4 +20,4 @@ Para o monitoramento dos talhões, câmeras de profundidade, utlizando o espectr
 Dessa forma, suportes para fixação de quatro câmeras nas laterias e um Lidar central foram desenvolvidos.
 
 ## Desenvolvimento
-O projeto foi subdivido entre os integrantes do grupo para o desenvolvimento em conjunto dos tópicos de [Eletrônica](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Eletr%C3%B4nica), [Mecânica](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Mec%C3%A2nica), [Software](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Software).
+O projeto foi subdivido entre os integrantes do grupo para o desenvolvimento em conjunto dos tópicos de [Eletrônica](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Eletr%C3%B4nica), [Mecânica](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Mec%C3%A2nica) e [Software](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/tree/main/Software).
