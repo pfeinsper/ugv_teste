@@ -14,3 +14,13 @@ Após o corte dos perfis, a rosca para alocação do parafuso M4 utilizado na mo
 
 ### Barras de Alumínio do Corpo 
 As barras de alumínio utilizadas na montagem do corpo do robô também precisaram ser adaptadas, uma vez que também foram compradas em comprimento superior ao especificado e depois cortadas no tamanho correto, de 96 mm.
+Após realização das operações de corte nas peças, foi necessário realizar a furação das barras, uma vez que o furo existente não era passante como no perfil. Além disso, também foi necessário realizar o rosqueamento em duas etapas, bem como ocorreu com a outra peça citada anteriormente.
+Na operação de furação foram realizadas as seguintes etapas para garantir um melhor alinhamento do furo:
+1.	pintura da face a ser furada com um marcador.
+2.	Remoção da tinta para marcação do furo com auxílio de um marcador de altura vertical. Traçado realizado com dimensão equivalente à metade do lado da face, garantindo que as retas se cruzem no centro.
+3.	Realização de uma marcação central para garantir que a broca não seja inserida de forma desalinhada, etapa realizada com um equipamento de punção de centro, uma morsa e um martelo.
+4.	Furação com auxílio de uma fresadora manual de bancada, buscando alinhar a ponta da broca com a marcação realizada na etapa anterior. Avançar e recuar a broca durante o processo, garantindo escoamento do cavaco e dissipação do calor gerado.
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/f95e6519-0d76-4535-a70d-1e3676e8d23a)
+
+
