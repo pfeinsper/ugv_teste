@@ -36,3 +36,11 @@ A peça com o rolamento para encaixe da suspensão também não estava disponív
 Um dos componentes da suspensão foi identificado erroneamente na documentação oficial, com código inicial 1601, que na realidade corresponde ao componente número 1611. Na visualização 3D da montagem, a peça identificada com código correspondente ao informado na documentação oficial apresenta diâmetro interno com valor inferior a 8mm, não montando no eixo especificado.
 
 ![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/36c3ddc6-d7ef-491b-82d5-7051012ea459)
+
+## Componentes Adicionais Fabricados
+
+Para garantir a adaptabilidade do robô ao ambiente de monitoramento, alguns componentes adicionais precisaram ser fabricados, dentre eles os suporte das câmeras e o do LiDAR, permitindo que esses componentes sejam futuramente alocados na estrutura.
+
+### Suporte das Câmeras
+
+### Suporte do LiDAR
