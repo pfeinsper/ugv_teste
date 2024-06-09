@@ -8,17 +8,18 @@ A eletrônica do protótipo é composta por duas placas: a placa de acionamento 
 
 ### Diagramas de Alimentação 
 
+Analisando primeiro a alimentação do sistema, uma bateria fornecendo 14,8V DC é conectada diretamente à placa de acionamento, passando por um circuito de proteção, que possui um fusível, um resistor de 1 kΩ e um diodo, que atuam como proteção do circuito dos motores. Além disso, um módulo de monitoramento de tensão e corrente (INA260) é utilizado para medição de sobrecorrente, além de um multímetro, que é utilizado para monitoramento do usuário dos dados de corrente e tensão.
+
 ![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/9f748100-b6f7-4ea9-af1d-d4a25ad7c739)
 
-Analisando primeiro a alimentação do sistema, uma bateria fornecendo 14,8V DC é conectada diretamente à placa de acionamento, passando por um circuito de proteção, que possui um fusível, um resistor de 1 kΩ e um diodo, que atuam como proteção do circuito dos motores. Além disso, um módulo de monitoramento de tensão e corrente (INA260) é utilizado para medição de sobrecorrente, além de um multímetro, que é utilizado para monitoramento do usuário dos dados de corrente e tensão.
 
 A tensão 14,8V é usada na alimentação de dois reguladores, um step-down de 12V (D24V22Fx), usado para alimentar os drivers da Roboclaw e outro de 5V (D24V150Fx). Há também um terceiro regulador de tensão que converte a tensão de 5V para 3,3V (MIC2937A-3.3WT), alimentando o módulo de expansão de PWM (PCA9685), o monitor de tensão e corrente e os LED’s de sinalização de ambas as placas. A tensão de 5V, por sua vez, também realiza a alimentação do módulo de expansão de PWM, dos servos, da Raspberry Pi, do display da IHM e dos encoders dos motores. Os motores são alimentados pela Roboclaw via PWM com tensão máxima de 12V.
 
 ### Diagramas de Sinais
 
-![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/25b216b0-da69-4218-9a60-26376cbdb3fe)
-
 Para o diagrama de sinais do sistema, note que um novo bloco foi adicionado, o conjunto entre o operador e o rádio controle, responsável por enviar os comandos por meio de ondas de rádio até a Raspberry Pi, que recebe o sinal por meio de um módulo USB. Os dados recebidos pelo microprocessador são enviados na serial e usados para o controle dos motores e servos. 
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/25b216b0-da69-4218-9a60-26376cbdb3fe)
 
 A malha de controle dos seis motores é comandada pela Raspberry Pi, que recebe a referência do rádio controle e envia os comandos para os drivers da Roboclaw, que realizam o acionamento via PWM. O fechamento da malha é realizado pelos encoders, que são responsáveis pelo sensoriamento, enviando os dados coletados ao controlador presente no driver.
 
@@ -33,3 +34,9 @@ Outra observação importante em relação ao diagrama é que a Raspberry Pi tam
 Analisando um pouco mais a placa de controle, observa-se a presença de alguns LED’s de sinalização, esses componentes possuem como finalidade a comunicação com o usuário, sinalizando por exemplo quando ocorre a transferência de dados pela serial, acendendo quando os bits são transferidos. 
 
 Por fim, o último fluxo de dados a ser analisado é o indicador do estado de emergência, no qual um sinal digital de nível lógico alto é enviado pelo botão de emergência ao microprocessador, que comunica a situação ao usuário por meio do display da IHM. 
+
+## Circuito de Emergência
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/a42c251f-cbff-423a-822a-de9d12807db7)
+
+## Detalhamento Circuito Display
