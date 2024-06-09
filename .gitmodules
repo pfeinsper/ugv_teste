@@ -1,0 +1,3 @@
+[submodule "Software/osr-rover-code-fonte"]
+	path = Software/osr-rover-code-fonte
+	url = https://github.com/FernandoBichuette/osr-rover-code.git
