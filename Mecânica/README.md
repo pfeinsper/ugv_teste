@@ -14,7 +14,9 @@ Após o corte dos perfis, a rosca para alocação do parafuso M4 utilizado na mo
 
 ### Barras de Alumínio do Corpo 
 As barras de alumínio utilizadas na montagem do corpo do robô também precisaram ser adaptadas, uma vez que também foram compradas em comprimento superior ao especificado e depois cortadas no tamanho correto, de 96 mm.
+
 Após realização das operações de corte nas peças, foi necessário realizar a furação das barras, uma vez que o furo existente não era passante como no perfil. Além disso, também foi necessário realizar o rosqueamento em duas etapas, bem como ocorreu com a outra peça citada anteriormente.
+
 Na operação de furação foram realizadas as seguintes etapas para garantir um melhor alinhamento do furo:
 1.	pintura da face a ser furada com um marcador.
 2.	Remoção da tinta para marcação do furo com auxílio de um marcador de altura vertical. Traçado realizado com dimensão equivalente à metade do lado da face, garantindo que as retas se cruzem no centro.
@@ -23,4 +25,14 @@ Na operação de furação foram realizadas as seguintes etapas para garantir um
 
 ![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/f95e6519-0d76-4535-a70d-1e3676e8d23a)
 
+O processo de rosqueamento também foi necessário e foi refeito de forma identica ao procedimento descrito para os perfis. 
 
+A peça com o rolamento para encaixe da suspensão também não estava disponível no modelo original da documentação da NASA, dessa forma foi adotada outra com diâmetro interno equivalente (Figura 28). Embora a substituta não encaixe perfeitamente e cause uma leve deformação estrutural, optou-se por não realizar nenhuma adaptação pois os componentes poderiam ser danificados e não possuíam substitutos. O efeito de deformação resultante não comprometeu o funcionamento do rover. 
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/749860f7-e1b6-4cc8-a596-2a6e98edfee1)
+
+## Revisão de Erros da Documentação Oficial 
+
+Um dos componentes da suspensão foi identificado erroneamente na documentação oficial, com código inicial 1601, que na realidade corresponde ao componente número 1611. Na visualização 3D da montagem, a peça identificada com código correspondente ao informado na documentação oficial apresenta diâmetro interno com valor inferior a 8mm, não montando no eixo especificado.
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/62897902/36c3ddc6-d7ef-491b-82d5-7051012ea459)
