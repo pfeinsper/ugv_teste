@@ -1,5 +1,11 @@
 # Mecânica
 
+## Modelo 3D
+O modelo base 3D pode ser encontrado em [OnShape](https://cad.onshape.com/documents/e4f00b1a3d2edb1a84bbba1c/w/8ab8f394324bcc586236ef5d/e/9191e5ad2a70f387b419bc55?renderMode=0&uiState=645ede92f3a1a9205158b296) ou no arquivo STEP fornecido acima.
+
+![image](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/a2137652-97fa-4312-889d-916f1c728e59)
+
+
 ## Adaptações da Documentação Oficial
 Foram necessárias algumas adaptações na montagem da documentação oficial, uma vez que os componentes eram importados e parte deles não estava disponível para entrega. Para contornar esse problema, foram compradas peças equivalentes que permitissem adaptação para a aplicação proposta.
 A seguir, as peças que passaram por esse processo adaptativo estão listadas e comentadas.
