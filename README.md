@@ -1,10 +1,10 @@
 # Umnaned Ground Vehicle 
 
-|<div align="left"> 
-<img src ="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/dc25603e-3112-40d3-9245-cfaf05d391e9" width="400px"/>
-</div> |<div align="right"> <img src ="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/c3708ece-0bcc-455d-8b7f-dbeec8ed0bf9" width="400px"/>
-</div>
- |
+## Imagens Lado a Lado
+
+| Imagem 1 | Imagem 2 |
+|----------|----------|
+| ![Imagem 1]([https://via.placeholder.com/150](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/dc25603e-3112-40d3-9245-cfaf05d391e9)) | ![Imagem 2]([https://via.placeholder.com/150](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/72100554/c3708ece-0bcc-455d-8b7f-dbeec8ed0bf9)) |
 
 
 
