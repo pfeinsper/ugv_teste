@@ -114,9 +114,66 @@ Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configura
 | `sudo systemctl status osr_startup`| Verifica o status do serviço       |
 
 
-### Imagens do UGV
+### Funcionamento do controle com joystick
 
-![Funcionamento do Controle](C:/Users/ferna/OneDrive/Documentos/Insper/8Periodo/PFE/Controle img/controle1.png)
+O controle remoto do UGV utiliza um transmissor de rádio controle Spektrum DXS, que comunica com um receptor instalado no UGV. O mapeamento dos botões e alavancas do controle foi configurado para facilitar a operação do UGV, permitindo controle de velocidade, direção, rotação e acionamento de funções específicas.
+
+# Mapeamento dos Botões e Alavancas
+
+1. Velocidade:
+
+   A alavanca esquerda controla a velocidade do UGV. Movendo a alavanca para frente, o UGV avança; movendo-a para trás, o UGV recua. Esta configuração é intuitiva 
+   e permite um controle preciso da velocidade.
+
+2. Direção:
+
+   A alavanca direita é responsável pela direção do UGV. Movendo a alavanca para a esquerda ou direita, o UGV gira na respectiva direção. Este controle é 
+   essencial para navegação em terrenos variados.
+
+3. Liga/Desliga:
+
+   O botão central inferior permite ligar ou desligar o UGV. Esta função é crucial para iniciar ou interromper a operação do UGV rapidamente.
+
+4.Emergência:
+
+   O botão de emergência, localizado na parte superior esquerda do controle, pode ser acionado para parar imediatamente o UGV. Este botão é mapeado para ajustar o    valor de scale_linear_turbo para 0.0, resultando na parada completa do veículo em situações de emergência.
+
+5. Rotação:
+
+   A rotação do UGV é controlada por um interruptor na parte superior direita do controle. Esta funcionalidade é utilizada para ajustes finos de rotação,       
+   permitindo manobras precisas.
+
+6.Deadman:
+
+   O botão Deadman, localizado na parte traseira do controle, deve ser pressionado continuamente para manter o UGV operando. Soltar este botão resulta na parada 
+   imediata do UGV, como uma medida de segurança adicional.
+
+# Operação
+Para operar o UGV, o usuário deve:
+
+1. Ligar o Controle e o UGV:
+
+   Pressione o botão de liga/desliga no controle e, em seguida, ligue o UGV.
+
+2. Ajustar a Velocidade e Direção:
+
+   Utilize as alavancas para controlar a velocidade e direção do UGV conforme necessário para a missão.
+
+3. Monitorar a Operação:
+
+   Esteja atento à resposta do UGV e ajuste os controles conforme necessário. Use a alavanca de rotação e o botão de emergência para manobras e paradas rápidas.
+
+4. Segurança:
+
+   Mantenha sempre um dedo no botão Deadman para garantir a operação segura. Em caso de emergência, utilize o botão de emergência para parar o UGV imediatamente.
+
+# Foto do controle
+
+![Controle frente](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/aa9ca24c-7300-449e-a2a1-b97dc7d0b22e)
+
+![Controle atrás](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/7a5b42c3-8238-409f-8633-226be0acbff6)
+
+
 _Funcionamento do controle com joystick_
 
 ![Fluxograma de Funcionamento do UGV](controle2.png)
