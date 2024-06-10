@@ -49,4 +49,9 @@ Para garantir a adaptabilidade do robô ao ambiente de monitoramento, alguns com
 
 ### Suporte das Câmeras
 
+Como requisitado pelo cliente, também foram desenvolvidos alguns suportes para câmeras e um LIDAR, utilizando o software Fusion 360 para modelagem e a tecnologia de impressão 3D para materialização do projeto.
+
+<img width="470" alt="suporte1" src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/38721933/3ee1b43e-3dae-476a-853d-57575b2d889a">
+
+
 ### Suporte do LiDAR
