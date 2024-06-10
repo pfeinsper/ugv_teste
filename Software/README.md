@@ -134,7 +134,7 @@ O controle remoto do UGV utiliza um transmissor de rádio controle Spektrum DXS,
 
    O botão central inferior permite ligar ou desligar o UGV. Esta função é crucial para iniciar ou interromper a operação do UGV rapidamente.
 
-4.Emergência:
+4. Emergência:
 
    O botão de emergência, localizado na parte superior esquerda do controle, pode ser acionado para parar imediatamente o UGV. Este botão é mapeado para ajustar o    valor de scale_linear_turbo para 0.0, resultando na parada completa do veículo em situações de emergência.
 
