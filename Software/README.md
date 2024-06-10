@@ -116,7 +116,7 @@ Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configura
 
 ### Imagens do UGV
 
-![Funcionamento do Controle](C:\Users\ferna\OneDrive\Documentos\Insper\8Periodo\PFE\Controle img\controle1.png)
+![Funcionamento do Controle](C:/Users/ferna/OneDrive/Documentos/Insper/8Periodo/PFE/Controle img/controle1.png)
 _Funcionamento do controle com joystick_
 
 ![Fluxograma de Funcionamento do UGV](controle2.png)
