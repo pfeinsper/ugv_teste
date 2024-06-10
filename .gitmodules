@@ -4,3 +4,6 @@
 [submodule "Projeto_Original"]
 	path = Projeto_Original
 	url = https://github.com/FernandoBichuette/Projeto_Original.git
+[submodule "Software/osr-rover-code"]
+	path = Software/osr-rover-code
+	url = https://github.com/FernandoBichuette/osr-rover-code.git
