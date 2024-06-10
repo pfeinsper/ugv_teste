@@ -109,7 +109,7 @@ Para operar o UGV, o usuário deve:
 
 ![Controle frente](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/aa9ca24c-7300-449e-a2a1-b97dc7d0b22e)
 
-![Controle atrás](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/7a5b42c3-8238-409f-8633-226be0acbff6)
+![Controle atrás](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/849eaf65-5603-4b8a-b43f-8160a4e89344)
 
 
 ### Passos para Instalação
