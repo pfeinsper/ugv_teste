@@ -21,37 +21,13 @@ Este projeto visa desenvolver um Veículo Terrestre Não Tripulado (UGV) para mo
      sudo apt upgrade
      ```
 
-### Instalação do ROS Humble
-
-1. **Adicionar Chave do Repositório ROS**:
-   ```sh
-   sudo apt install software-properties-common
-   sudo add-apt-repository universe
-   sudo apt update
-   sudo apt install curl
-   curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-   ```
-
-2. **Adicionar Repositório ROS**:
-   ```sh
-   sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
-   sudo apt update
-   sudo apt install ros-humble-desktop
-   ```
-
-3. **Configurar Ambiente ROS**:
-   Adicione as seguintes linhas ao arquivo `~/.bashrc`:
-   ```sh
-   source /opt/ros/humble/setup.bash
-   ```
-
 ### Configuração da Raspberry Pi como Servidor e Comunicação SSH
 
 1. **Modo Servidor**:
    - A configuração do servidor permite que a Raspberry Pi seja acessada remotamente.
    - Conecte-se ao servidor utilizando SSH:
      ```sh
-     ssh ubuntu@10.42.0.1
+     ssh embrapa@10.42.0.1
      ```
 
 2. **Instalação do Framework ROS**:
@@ -122,6 +98,30 @@ Na última linha adicionou-se o código:
      ```sh
      Rviz2
      ```
+
+### Instalação do ROS Humble
+
+1. **Adicionar Chave do Repositório ROS**:
+   ```sh
+   sudo apt install software-properties-common
+   sudo add-apt-repository universe
+   sudo apt update
+   sudo apt install curl
+   curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+   ```
+
+2. **Adicionar Repositório ROS**:
+   ```sh
+   sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
+   sudo apt update
+   sudo apt install ros-humble-desktop
+   ```
+
+3. **Configurar Ambiente ROS**:
+   Adicione as seguintes linhas ao arquivo `~/.bashrc`:
+   ```sh
+   source /opt/ros/humble/setup.bash
+   ```
 
 ## Resultados
 
