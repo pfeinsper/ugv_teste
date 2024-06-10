@@ -32,7 +32,7 @@ Este projeto visa desenvolver um Veículo Terrestre Não Tripulado (UGV) para mo
 
 ## Funcionamento do Controle
 
-Para configurar o controle remoto, mapeamos eixos e botões utilizando o nó `joy` do ROS 2.
+O controle remoto do UGV utiliza um transmissor de rádio controle Spektrum DXS, que comunica com um receptor instalado no UGV. O mapeamento dos botões e alavancas do controle foi configurado para facilitar a operação do UGV, permitindo controle de velocidade, direção, rotação e acionamento de funções específicas. Para configurar o controle remoto, mapeamos eixos e botões utilizando o nó `joy` do ROS 2.
 
 ### Parâmetros do Controle
 
@@ -49,74 +49,10 @@ Para configurar o controle remoto, mapeamos eixos e botões utilizando o nó `jo
 
 ### Rotina de Emergência
 
-Foi implementada uma rotina de emergência para garantir a segurança operacional do rover. Ao acionar o botão de emergência, o valor de `scale_linear_turbo` é ajustado para 0.0, resultando na parada completa do rover.
+Foi implementada uma rotina de emergência para garantir a segurança operacional do rover. Ao acionar o botão de emergência, o valor de `scale_linear_turbo` é ajustado para 0.0, resultando na parada completa do rover. Foi feito um fluxograma mostrando essa rotina.
 
-## Instalação do Framework ROS
+![Fluxograma de emergencia](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/f8c5dcd0-ad6a-4c44-ac0e-e2f40bb0a978)
 
-O framework ROS (Robot Operating System) foi utilizado para gerenciar os nós de comunicação entre os diferentes componentes do UGV.
-
-### Passos para Instalação
-
-1. **Atualização do Sistema:**
-   - `sudo apt update`
-   - `sudo apt upgrade`
-
-2. **Instalação do ROS 2 Humble:**
-   - Seguir as instruções oficiais para instalação do ROS 2 Humble.
-
-### Bringup Manual do Rover
-
-Para iniciar manualmente o rover, execute os seguintes comandos no terminal:
-
-1. Certificar que o programa já não esteja sendo executado:
-   ```bash
-   sudo systemctl stop osr_startup
-   ```
-
-2. Executar o comando de bringup:
-   ```bash
-   ros2 launch osr_bringup osr_launch.py
-   ```
-
-### Bringup Automático com Script de Lançamento
-
-Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configuramos a Raspberry Pi para iniciar o código do rover automaticamente.
-
-1. Navegar até a pasta `init_scripts`:
-   ```bash
-   cd ~/osr_ws/src/osr-rover-code/init_scripts
-   ```
-
-2. Criar links simbólicos:
-   ```bash
-   sudo ln -s $(pwd)/launch_osr.sh /usr/local/bin/launch_osr.sh
-   sudo ln -s $(pwd)/osr_paths.sh /usr/local/bin/osr_paths.sh
-   ```
-
-3. Copiar o arquivo de serviço para o diretório de serviços do systemd:
-   ```bash
-   sudo cp osr_startup.service /etc/systemd/system/osr_startup.service
-   ```
-
-4. Ajustar as permissões do arquivo de serviço:
-   ```bash
-   sudo chmod 644 /etc/systemd/system/osr_startup.service
-   ```
-
-### Tabela de Comandos do Bringup Automático
-
-| Comando                          | Descrição                           |
-|----------------------------------|-------------------------------------|
-| `sudo systemctl start osr_startup` | Inicia o serviço manualmente       |
-| `sudo systemctl stop osr_startup`  | Para o serviço manualmente          |
-| `sudo systemctl enable osr_startup`| Habilita o serviço no boot         |
-| `sudo systemctl disable osr_startup`| Desabilita o serviço no boot       |
-| `sudo systemctl status osr_startup`| Verifica o status do serviço       |
-
-
-### Funcionamento do controle com joystick
-
-O controle remoto do UGV utiliza um transmissor de rádio controle Spektrum DXS, que comunica com um receptor instalado no UGV. O mapeamento dos botões e alavancas do controle foi configurado para facilitar a operação do UGV, permitindo controle de velocidade, direção, rotação e acionamento de funções específicas.
 
 # Mapeamento dos Botões e Alavancas
 
@@ -178,6 +114,67 @@ _Funcionamento do controle com joystick_
 
 ![Fluxograma de Funcionamento do UGV](controle2.png)
 _Fluxograma de funcionamento do UGV_
+
+
+
+### Passos para Instalação
+
+1. **Atualização do Sistema:**
+   - `sudo apt update`
+   - `sudo apt upgrade`
+
+2. **Instalação do ROS 2 Humble:**
+   - Seguir as instruções oficiais para instalação do ROS 2 Humble.
+
+### Bringup Manual do Rover
+
+Para iniciar manualmente o rover, execute os seguintes comandos no terminal:
+
+1. Certificar que o programa já não esteja sendo executado:
+   ```bash
+   sudo systemctl stop osr_startup
+   ```
+
+2. Executar o comando de bringup:
+   ```bash
+   ros2 launch osr_bringup osr_launch.py
+   ```
+
+### Bringup Automático com Script de Lançamento
+
+Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configuramos a Raspberry Pi para iniciar o código do rover automaticamente.
+
+1. Navegar até a pasta `init_scripts`:
+   ```bash
+   cd ~/osr_ws/src/osr-rover-code/init_scripts
+   ```
+
+2. Criar links simbólicos:
+   ```bash
+   sudo ln -s $(pwd)/launch_osr.sh /usr/local/bin/launch_osr.sh
+   sudo ln -s $(pwd)/osr_paths.sh /usr/local/bin/osr_paths.sh
+   ```
+
+3. Copiar o arquivo de serviço para o diretório de serviços do systemd:
+   ```bash
+   sudo cp osr_startup.service /etc/systemd/system/osr_startup.service
+   ```
+
+4. Ajustar as permissões do arquivo de serviço:
+   ```bash
+   sudo chmod 644 /etc/systemd/system/osr_startup.service
+   ```
+
+### Tabela de Comandos do Bringup Automático
+
+| Comando                          | Descrição                           |
+|----------------------------------|-------------------------------------|
+| `sudo systemctl start osr_startup` | Inicia o serviço manualmente       |
+| `sudo systemctl stop osr_startup`  | Para o serviço manualmente          |
+| `sudo systemctl enable osr_startup`| Habilita o serviço no boot         |
+| `sudo systemctl disable osr_startup`| Desabilita o serviço no boot       |
+| `sudo systemctl status osr_startup`| Verifica o status do serviço       |
+
 
 ### Configuração display LCD 16x02 com Módulo de Conversão I²C
 
