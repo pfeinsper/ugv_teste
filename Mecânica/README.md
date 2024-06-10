@@ -53,5 +53,10 @@ Como requisitado pelo cliente, também foram desenvolvidos alguns suportes para 
 
 <img width="470" alt="suporte1" src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/38721933/3ee1b43e-3dae-476a-853d-57575b2d889a">
 
+<img width="474" alt="Screenshot at Jun 10 11-16-50" src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/38721933/ca6b2074-cb1d-4ac4-968d-367030aa3d81">
+
 
 ### Suporte do LiDAR
+
+<img width="460" alt="suporte3" src="https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/38721933/a7b702c6-86ae-4b73-a62c-17ce572221a8">
+
