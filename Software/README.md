@@ -30,13 +30,98 @@ Este projeto visa desenvolver um Veículo Terrestre Não Tripulado (UGV) para mo
      ssh embrapa@10.42.0.1
      ```
 
-2. **Instalação do Framework ROS**:
-   - Com o ROS instalado, crie um workspace e compile os pacotes necessários:
-     ```sh
-     mkdir -p ~/ros2_ws/src
-     cd ~/ros2_ws
-     colcon build
-     ```
+## Funcionamento do Controle
+
+Para configurar o controle remoto, mapeamos eixos e botões utilizando o nó `joy` do ROS 2.
+
+### Parâmetros do Controle
+
+- **scale_linear.x**: 0.12
+- **axis_linear.x**: 1
+- **axis_angular.yaw**: 2
+- **axis_angular.pitch**: 4
+- **scale_angular.yaw**: 1.25
+- **scale_angular.pitch**: 0.25
+- **scale_angular_turbo.yaw**: 0.0
+- **scale_linear_turbo.x**: 0.0
+- **enable_button**: 0
+- **enable_turbo_button**: 1
+
+### Rotina de Emergência
+
+Foi implementada uma rotina de emergência para garantir a segurança operacional do rover. Ao acionar o botão de emergência, o valor de `scale_linear_turbo` é ajustado para 0.0, resultando na parada completa do rover.
+
+## Instalação do Framework ROS
+
+O framework ROS (Robot Operating System) foi utilizado para gerenciar os nós de comunicação entre os diferentes componentes do UGV.
+
+### Passos para Instalação
+
+1. **Atualização do Sistema:**
+   - `sudo apt update`
+   - `sudo apt upgrade`
+
+2. **Instalação do ROS 2 Humble:**
+   - Seguir as instruções oficiais para instalação do ROS 2 Humble.
+
+### Bringup Manual do Rover
+
+Para iniciar manualmente o rover, execute os seguintes comandos no terminal:
+
+1. Certificar que o programa já não esteja sendo executado:
+   ```bash
+   sudo systemctl stop osr_startup
+   ```
+
+2. Executar o comando de bringup:
+   ```bash
+   ros2 launch osr_bringup osr_launch.py
+   ```
+
+### Bringup Automático com Script de Lançamento
+
+Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configuramos a Raspberry Pi para iniciar o código do rover automaticamente.
+
+1. Navegar até a pasta `init_scripts`:
+   ```bash
+   cd ~/osr_ws/src/osr-rover-code/init_scripts
+   ```
+
+2. Criar links simbólicos:
+   ```bash
+   sudo ln -s $(pwd)/launch_osr.sh /usr/local/bin/launch_osr.sh
+   sudo ln -s $(pwd)/osr_paths.sh /usr/local/bin/osr_paths.sh
+   ```
+
+3. Copiar o arquivo de serviço para o diretório de serviços do systemd:
+   ```bash
+   sudo cp osr_startup.service /etc/systemd/system/osr_startup.service
+   ```
+
+4. Ajustar as permissões do arquivo de serviço:
+   ```bash
+   sudo chmod 644 /etc/systemd/system/osr_startup.service
+   ```
+
+### Tabela de Comandos do Bringup Automático
+
+| Comando                          | Descrição                           |
+|----------------------------------|-------------------------------------|
+| `sudo systemctl start osr_startup` | Inicia o serviço manualmente       |
+| `sudo systemctl stop osr_startup`  | Para o serviço manualmente          |
+| `sudo systemctl enable osr_startup`| Habilita o serviço no boot         |
+| `sudo systemctl disable osr_startup`| Desabilita o serviço no boot       |
+| `sudo systemctl status osr_startup`| Verifica o status do serviço       |
+
+
+### Imagens do UGV
+
+![Funcionamento do Controle](path/to/image1.png)
+_Funcionamento do controle com joystick_
+
+![Fluxograma de Funcionamento do UGV](path/to/image2.png)
+_Fluxograma de funcionamento do UGV_
+
 ### Configuração display LCD 16x02 com Módulo de Conversão I²C
 
 É necessário alimentá-lo com 5V em um dos pinos de alimentação disponíveis e assinalados pelo silkscreen da brain board, bem como conectar os pinos SDA e SCL.
