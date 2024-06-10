@@ -51,6 +51,8 @@ O controle remoto do UGV utiliza um transmissor de rádio controle Spektrum DXS,
 
 Foi implementada uma rotina de emergência para garantir a segurança operacional do rover. Ao acionar o botão de emergência, o valor de `scale_linear_turbo` é ajustado para 0.0, resultando na parada completa do rover. Foi feito um fluxograma mostrando essa rotina.
 
+_Fluxograma de funcionamento do UGV_
+
 ![Fluxograma de emergencia](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/f8c5dcd0-ad6a-4c44-ac0e-e2f40bb0a978)
 
 
@@ -79,7 +81,7 @@ Foi implementada uma rotina de emergência para garantir a segurança operaciona
    A rotação do UGV é controlada por um interruptor na parte superior direita do controle. Esta funcionalidade é utilizada para ajustes finos de rotação,       
    permitindo manobras precisas.
 
-6.Deadman:
+6. Deadman:
 
    O botão Deadman, localizado na parte traseira do controle, deve ser pressionado continuamente para manter o UGV operando. Soltar este botão resulta na parada 
    imediata do UGV, como uma medida de segurança adicional.
@@ -108,13 +110,6 @@ Para operar o UGV, o usuário deve:
 ![Controle frente](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/aa9ca24c-7300-449e-a2a1-b97dc7d0b22e)
 
 ![Controle atrás](https://github.com/pfeinsper/unmaned-ground-vehicle-2024.1/assets/49559187/7a5b42c3-8238-409f-8633-226be0acbff6)
-
-
-_Funcionamento do controle com joystick_
-
-![Fluxograma de Funcionamento do UGV](controle2.png)
-_Fluxograma de funcionamento do UGV_
-
 
 
 ### Passos para Instalação
