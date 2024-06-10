@@ -116,10 +116,10 @@ Para automatizar o bringup e eliminar a necessidade de acesso via SSH, configura
 
 ### Imagens do UGV
 
-![Funcionamento do Controle](path/to/image1.png)
+![Funcionamento do Controle](C:\Users\ferna\OneDrive\Documentos\Insper\8Periodo\PFE\Controle img\controle1.png)
 _Funcionamento do controle com joystick_
 
-![Fluxograma de Funcionamento do UGV](path/to/image2.png)
+![Fluxograma de Funcionamento do UGV](controle2.png)
 _Fluxograma de funcionamento do UGV_
 
 ### Configuração display LCD 16x02 com Módulo de Conversão I²C
